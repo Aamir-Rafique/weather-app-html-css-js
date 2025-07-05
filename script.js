@@ -1,7 +1,7 @@
 
 
 const API_KEY = "96bf54ef5bba4763b4455751250507";
-const BASE_URL = "http://api.weatherapi.com/v1/current.json";
+const BASE_URL = "https://api.weatherapi.com/v1/current.json";
 
 // Get DOM elements
 
@@ -36,7 +36,7 @@ async function searchWeather() {
         return;
     }
 
-    // const BASE_URL='http://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=Karachi';
+    // const BASE_URL='https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=Karachi';
     const URL = `${BASE_URL}?key=${API_KEY}&q=${locationInput}`;
 
     try {
