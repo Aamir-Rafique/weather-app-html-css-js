@@ -104,12 +104,12 @@ document.getElementById("geo-btn").addEventListener("click", () => {
     
     navigator.geolocation.getCurrentPosition(
         async function (position) {
+            alert("Fetching your live location please wait!")
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
             
             // Use coordinates in API request
             const response = await fetch(`${BASE_URL}?key=${API_KEY}&q=${lat},${lon}`);
-            alert("Fetching your live location please wait!")
             const data = await response.json();
 
             displayWeatherInfo(data);
