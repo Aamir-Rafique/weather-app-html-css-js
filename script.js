@@ -101,10 +101,9 @@ searchInput.addEventListener("keydown", function (event) {
 
 
 document.getElementById("geo-btn").addEventListener("click", () => {
-    
+    alert("Fetching your live location please wait!")
     navigator.geolocation.getCurrentPosition(
         async function (position) {
-            alert("Fetching your live location please wait!")
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
             
