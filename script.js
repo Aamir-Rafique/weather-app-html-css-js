@@ -47,6 +47,7 @@ async function searchWeather() {
 
         const data = await response.json();
         displayWeatherInfo(data);
+        showWeatherInfoBox();
 
     } catch (error) {
         alert("Error Fetching Data!")
@@ -106,12 +107,13 @@ document.getElementById("geo-btn").addEventListener("click", () => {
         async function (position) {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            
+
             // Use coordinates in API request
             const response = await fetch(`${BASE_URL}?key=${API_KEY}&q=${lat},${lon}`);
             const data = await response.json();
 
             displayWeatherInfo(data);
+            showWeatherInfoBox();   
         },
         function (error) {
             alert("Unable to retrieve your location.");
@@ -119,3 +121,14 @@ document.getElementById("geo-btn").addEventListener("click", () => {
         }
     );
 });
+
+
+const weatherInfoBox = document.getElementById("weather-info");
+
+document.addEventListener("DOMContentLoaded", () => {
+    weatherInfoBox.style.display = 'none';
+})
+
+function showWeatherInfoBox() {
+    weatherInfoBox.style.display='flex';
+}
