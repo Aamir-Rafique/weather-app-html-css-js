@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>☁ Weather App</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body
+    class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col items-center justify-center font-sans p-4">
+    <div class="container max-w-md w-full bg-white rounded-2xl shadow-lg p-6">
+        <h1 class="text-3xl font-bold text-center text-blue-600 mb-4">Weather App</h1>
+
+        <div class="search-box flex flex-col sm:flex-row gap-2 mb-6">
+            <input type="text" placeholder="Enter City"
+                class="flex-1 px-4 py-2 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
+
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 active:bg-blue-800 transition">
+                Search
+            </button>
+
+            <button id="geo-btn"
+                class="bg-gray-600 text-white  px-4 py-2 rounded-md hover:bg-gray-700 active:bg-gray-800 transition">
+                <i title="Use Current Location" class="fa-sharp fa-solid fa-location-dot text-2xl"></i> </button>
+        </div>
+
+
+        <div class="weather-info space-y-3 flex flex-col  ">
+            <h2 class="text-lg font-semibold">City: <span id="city" class="text-gray-700"></span></h2>
+            <h2 class="text-lg font-semibold">Region: <span id="region" class="text-gray-700"></span></h2>
+            <h2 class="text-lg font-semibold">Country: <span id="country" class="text-gray-700"></span></h2>
+            <p class="text-lg font-semibold">Weather: <span id="weather" class="font-medium text-yellow-600"></span></p>
+            <p class="text-lg font-semibold">Temperature (C): <span id="temp_c"
+                    class="font-medium text-blue-800"></span></p>
+            <p class="text-lg font-semibold">Temperature (F): <span id="temp_f"
+                    class="font-medium text-blue-800"></span></p>
+            <p class="text-lg font-semibold">Last Updated: <span id="date" class="text-gray-600"></span></p>
+            <p class="text-lg font-semibold">Wind Speed: <span id="wind-speed" class="font-medium text-purple-500"></span></p>
+            <p>Latitude: <span id="latitude" class="font-medium text-gray-500"></span></p>
+            <p>Longitude: <span id="longitude" class="font-medium text-gray-500"></span></p>
+        </div>
+    </div>
+
+    <footer class="mt-6 text-sm text-center text-gray-700">
+        <p>
+            Made with ❤️ by <a href="https://github.com/Aamir-Rafique" target="_blank"
+                class="text-blue-600 hover:underline">Aamir Rafique</a>
+        </p>
+        <p>
+            Weather data provided by <a href="https://www.weatherapi.com/" target="_blank"
+                class="text-blue-600 hover:underline">WeatherAPI</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
